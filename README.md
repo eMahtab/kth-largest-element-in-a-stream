@@ -29,7 +29,9 @@ class KthLargest {
 ```
 
 ### Key points :
-Note that in the `add(num)` if the size of minHeap is less than k, we simply add the num to minHeap, otherwise we check whether new element is greater than the peek element (smallest element) in the minHeap, if thats the case only then we add the new element to minHeap.
+Note that in the `add(num)` function, if the size of minHeap is less than k, we simply add the num to minHeap, otherwise we check whether new element is greater than the peek element (smallest element) in the minHeap, if thats the case only then we add the new element to minHeap by first removing the smallest element from minHeap of size k.
+
+This is how we maintain the minHeap of size k, so the kth largest element will always be peek of minHeap.
 
 # References :
 https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/149050/Java-Priority-Queue
